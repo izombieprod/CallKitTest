@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
@@ -17,22 +17,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="7devs-logging-screen" translatesAutoresizingMaskIntoConstraints="NO" id="2gG-yR-ZwJ">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="7devs-logging-screen" translatesAutoresizingMaskIntoConstraints="NO" id="2gG-yR-ZwJ">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="buttom-logo-7devs" translatesAutoresizingMaskIntoConstraints="NO" id="Xc0-Qs-lbj">
-                                <rect key="frame" x="121" y="753" width="173" height="54"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="buttom-logo-7devs" translatesAutoresizingMaskIntoConstraints="NO" id="Xc0-Qs-lbj">
+                                <rect key="frame" x="131" y="743" width="152" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="9Fl-uS-4RE"/>
+                                    <constraint firstAttribute="width" constant="152" id="IDV-Vk-zSL"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Xc0-Qs-lbj" firstAttribute="centerX" secondItem="2gG-yR-ZwJ" secondAttribute="centerX" id="0y4-EO-7yi"/>
+                            <constraint firstItem="2gG-yR-ZwJ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="J1n-HC-Hcq"/>
+                            <constraint firstItem="2gG-yR-ZwJ" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="LXj-qx-FA3"/>
+                            <constraint firstItem="2gG-yR-ZwJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="aUu-E8-WCd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Xc0-Qs-lbj" secondAttribute="bottom" constant="62" id="r0f-ED-Z2t"/>
+                            <constraint firstAttribute="bottom" secondItem="2gG-yR-ZwJ" secondAttribute="bottom" id="xbB-c2-PHn"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="52.173913043478265" y="375"/>
+            <point key="canvasLocation" x="50.724637681159422" y="374.33035714285711"/>
         </scene>
     </scenes>
     <resources>

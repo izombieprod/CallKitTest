@@ -3,19 +3,17 @@ import CallKit
 
 // Uncomment blocks below to test on PHYSICAL DEVICE!
 
+
 // MARK: - RECIEVE A CALL
 
 class ViewController: UIViewController, CXProviderDelegate {
 
     override func viewDidLoad() {
-        let provider = CXProvider(configuration: CXProviderConfiguration())
-        provider.setDelegate(self, queue: nil)
-        let update = CXCallUpdate()
-        update.remoteHandle = CXHandle(type: .generic, value: "Vasiliy")
-        provider.reportNewIncomingCall(with: UUID(), update: update, completion: { error in })
+       recieveCall()
     }
 
     func providerDidReset(_ provider: CXProvider) {
+        
     }
 
     func provider(_ provider: CXProvider, perform action: CXAnswerCallAction) {
@@ -24,6 +22,14 @@ class ViewController: UIViewController, CXProviderDelegate {
 
     func provider(_ provider: CXProvider, perform action: CXEndCallAction) {
         action.fulfill()
+    }
+    
+    private func recieveCall() {
+        let provider = CXProvider(configuration: CXProviderConfiguration())
+        provider.setDelegate(self, queue: nil)
+        let update = CXCallUpdate()
+        update.remoteHandle = CXHandle(type: .generic, value: "Vasiliy")
+        provider.reportNewIncomingCall(with: UUID(), update: update, completion: { error in })
     }
 
 }
